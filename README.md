@@ -14,3 +14,4 @@
 ![](bsd-setup/12.png)
 ![](bsd-setup/13.png)
 ![](bsd-setup/14.png)
+![](bsd-setup/15.png)
