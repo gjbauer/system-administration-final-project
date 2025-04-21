@@ -34,3 +34,6 @@ Now, when you reboot the machine using 'doas reboot', you will login to your new
 ![](bsd-setup/15.png)
 Now, you can enter sway by simply typing 'sway'
 ![](bsd-setup/16.png)
+## Snort
+![](snort/0.png)
+![](snort/1.png)
