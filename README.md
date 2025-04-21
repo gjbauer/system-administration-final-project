@@ -1,5 +1,7 @@
 # System Administration Final Project
 
+# TODO: Missing Adding Aditional User Step!
+
 ## Base Installation
 The first step is to download the appropriate installation image for the appropriate architecture and storage medium for your server environment and flash it. Once you have booted into the install select to open a shell.
 ![](bsd-setup/1.png)
@@ -14,11 +16,19 @@ As we intend to have a server that is openly facing the internet, we will want t
 Enable all system hardening measures except for 'syslogd,' for remote logging. 
 ![](bsd-setup/7.png)
 ## Graphical and User Interface
+Install the following list of packages. These are intended just as a base set of user applications which can enable a usable experience.
 ![](bsd-setup/8.png)
+Enable 'seatd' as it will be required by sway. Vi into '/usr/local/etc/doas.conf'
 ![](bsd-setup/9.png)
+Type 'i' to enter instertion mode. Then type the following. Hit the 'Esc' key to exit insertion mode. Then type ':wq + Enter' to save the file.
 ![](bsd-setup/10.png)
+Now, as your regular user type 'chsh'
 ![](bsd-setup/11.png)
+Use your arrow key to move down to the line containing your shell (aka '/bin/sh') and type 'x' until that portion goes away. Then type 'i' to enter insertion mode just like we did above and put in the following path to your new shell. Write and exit.
 ![](bsd-setup/12.png)
+Clone, copy over, and delete your dotfiles configuration.
 ![](bsd-setup/13.png)
+Now, when you reboot the machine using 'doas reboot', you will login to your new ZSH configuration, and seatd will be running.
 ![](bsd-setup/14.png)
+Now, you can enter sway by simply typing 'sway'
 ![](bsd-setup/15.png)
