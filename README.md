@@ -1,7 +1,5 @@
 # System Administration Final Project
 
-# TODO: Missing Adding Additional User Step!
-
 ## Base Installation
 The first step is to download the appropriate installation image for the appropriate architecture and storage medium for your server environment and flash it. Once you have booted into the install select to open a shell.
 ![](bsd-setup/1.png)
@@ -15,6 +13,10 @@ As we intend to have a server that is openly facing the internet, we will want t
 ![](bsd-setup/5.png)
 Enable all system hardening measures except for 'syslogd,' for remote logging. 
 ![](bsd-setup/6.png)
+When prompted to add users select 'yes.'
+![](bsd-setup/7.png)
+Be sure to add your user to both the wheel and video groups.
+![](bsd-setup/8.png)
 ## Graphical and User Interface
 Install the following list of packages. These are intended just as a base set of user applications which can enable a usable experience.
 ![](bsd-setup/9.png)
