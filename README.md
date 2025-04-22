@@ -39,9 +39,27 @@ This would be a good time to install the web server and firewall of your choice.
 ## Snort
 ## A little caveat
 Just as a little note here, the FreeBSD installation which I had spun up in the first part is running on VMWare, and I am unable to make any configuration changes nor install any graphics drivers that allow Wayland to actually function properly on this platform, though most people should almost never run into this situation when running either on real world hardware or an alternative virtual machine environment (I recommend 'libvirt' and 'virt-manager', personally.) All of that is to say that the rest of this was completed on a Linux Mint VM.
+
+Start by installing snort through your package manager.
+
 ![](snort/0.png)
+
+Then clone the GitHub repository for the GUI.
+
 ![](snort/1.png)
+
+'cd' into the sub-directory containing the installer. 'chmod' it to give it executable permissions and run it.
+
 ![](snort/2.png)
+
+After entering the main application, open the rules generator. The only thing we need to do for this simple demo is to set the following settings on the blue space at the top.
+
 ![](snort/4.png)
+
+Here I have a webpage opened in the background to my Apache server homepage. And I am choosing to run Snort for 6 minutes. 
+
 ![](snort/5.png)
+
+Then, all I do is 'ping localhost', wait a second or two, then open the log analyzer...
+
 ![](snort/6.png)
