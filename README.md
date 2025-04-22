@@ -37,5 +37,7 @@ Now, you can enter sway by simply typing 'sway'
 ## Web Server and Firewall
 This would be a good time to install the web server and firewall of your choice. Personally, I am partial to NGINX, but decided to use Apache for this demo.
 ## Snort
+## A little caveat
+Just as a little note here, the FreeBSD installation which I had spun up in the first part is running on VMWare, and I am unable to make any configuration changes nor install any graphics drivers that allow Wayland to actually function properly on this platform, though most people should almost never run into this situation when running either on real world hardware or an alternative virtual machine environment (I recommend 'libvirt' and 'virt-manager', personally.) All of that is to say that the rest of this was completed on a Linux Mint VM.
 ![](snort/0.png)
 ![](snort/1.png)
