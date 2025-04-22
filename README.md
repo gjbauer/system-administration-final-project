@@ -52,7 +52,7 @@ Then clone the GitHub repository for the GUI.
 
 ![](snort/2.png)
 
-After entering the main application, open the rules generator. The only thing we need to do for this simple demo is to set the following settings on the blue space at the top.
+After entering the main application, open the rules generator. The only thing we need to do for this simple demo is to set the following settings on the blue space at the top. Opt to create an alert for both denial-of-service as well as attempted-dos.
 
 ![](snort/4.png)
 
@@ -60,6 +60,6 @@ Here I have a webpage opened in the background to my Apache server homepage. And
 
 ![](snort/5.png)
 
-Then, all I do is 'ping localhost', wait a second or two, then open the log analyzer...
+Finally, I run the exploit script and open the log analyzer after it completes...
 
 ![](snort/6.png)
