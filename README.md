@@ -7,7 +7,7 @@ Type the command 'geom disk list' to get a list of the disks available. Find the
 ![](bsd-setup/2.png)
 Deselect the various additional components as we you will not need them. (Unless you intend to run Wine on your server, in which case, you should keep lib32.)
 ![](bsd-setup/3.png)
-Encrypt the disk, and encrypt the sway. In our case, we opt for the default 'stripe' option on the next page as we are using SLED and not RAID, but your circumstances may differ.
+Encrypt the disk, and encrypt the swap. In our case, we opt for the default 'stripe' option on the next page as we are using SLED and not RAID, but your circumstances may differ.
 ![](bsd-setup/4.png)
 As we intend to have a server that is openly facing the internet, we will want to make sure that our time is in sync.
 ![](bsd-setup/5.png)
@@ -34,6 +34,8 @@ Now, when you reboot the machine using 'doas reboot', you will login to your new
 ![](bsd-setup/15.png)
 Now, you can enter sway by simply typing 'sway'
 ![](bsd-setup/16.png)
+## Web Server and Firewall
+This would be a good time to install the web server and firewall of your choice. Personally, I am partial to NGINX, but decided to use Apache for this demo.
 ## Snort
 ![](snort/0.png)
 ![](snort/1.png)
