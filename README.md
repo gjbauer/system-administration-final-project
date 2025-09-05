@@ -18,7 +18,7 @@ When prompted to add users select 'yes.'
 Be sure to add your user to both the wheel and video groups.
 ![](bsd-setup/8.png)
 ## Graphical and User Interface
-Install the following list of packages. These are intended just as a base set of user applications which can enable a usable experience.
+Install the following list of packages. These are intended just as a base set of user applications which can enable a usable experience. Personally, I recommend installing Firefox instead for a slightly more secure browsing experience based upon memory-safe Rust.
 ![](bsd-setup/9.png)
 Enable 'seatd' as it will be required by sway. Vi into '/usr/local/etc/doas.conf'
 ![](bsd-setup/10.png)
