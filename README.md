@@ -34,10 +34,12 @@ Now, when you reboot the machine using 'doas reboot', you will login to your new
 ![](bsd-setup/15.png)
 Now, you can enter sway by simply typing 'sway'
 ![](bsd-setup/16.png)
+### Why a GUI?
+Well, this is certainly a good question as we are theoretically intending this machine to only run as a server. A short answer is that Snort is a piece of software with a lot of different features and I did not spend the time when preparing this presentation to fully immerse myself in the documentation for this piece of software, so it was easier to modify an existing piece of software which I had found on Github which provided a friendly user interface to generate rules for the daemon. A full-time system admin might want to spend some more time reading the official documentation in order to better understand how to best incorporate Snort into their *specific* use case.
 ## Web Server and Firewall
 This would be a good time to install the web server and firewall of your choice. Personally, I am partial to NGINX, but decided to use Apache for this demo.
 ## Snort
-## A little caveat
+### A little caveat
 Just as a little note here, the FreeBSD installation which I had spun up in the first part is running on VMWare, and I am unable to make any configuration changes nor install any graphics drivers that allow Wayland to actually function properly on this platform, though most people should almost never run into this situation when running either on real world hardware or an alternative virtual machine environment (I recommend 'libvirt' and 'virt-manager', personally.) All of that is to say that the rest of this was completed on a Linux Mint VM.
 
 Start by installing snort through your package manager.
@@ -63,3 +65,8 @@ Here I have a webpage opened in the background to my Apache server homepage. And
 Finally, I run the exploit script and open the log analyzer after it completes...
 
 ![](snort/6.png)
+
+## Rkhunter
+Another way that we can check for any potential compromises in our system is to run a piece of software called "rkhunter." Wikipedia describes rkhunter as follows: "rkhunter (Rootkit Hunter) is a Unix-based tool that scans for rootkits, backdoors and possible local exploits. It does this by comparing SHA-1 hashes of important files with known good ones in online databases, searching for default directories (of rootkits), wrong permissions, hidden files, suspicious strings in kernel modules, and special tests for Linux and FreeBSD." Rkhunter can be installed on your FreeBSD installation by typing 'doas pkg install rkhunter' as an unprivilegeduser or simply 'pkg install rkhunter' as a prviliged user. Once installed a priviliged user, or a non-privileged user using the 'doas' command can perform a system scan by running the command 'rkhunter -c.' Upon completion, you should get an output similar to that which you can see below from my scan that I ran on my Linux Mint VM.
+
+![](rkhunter/0.png)
